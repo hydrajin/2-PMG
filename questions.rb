@@ -1,13 +1,14 @@
 class Questions
 
+  attr_accessor :num1, :num2
+
   def initialize()
-      @num1 = rand(0..20) # randomly pick a number between 0 and 20
-      @num2 = rand(0..20) 
-      @answer = num1 + num2
+    @num1 = rand(1..20)
+    @num2 = rand(1..20)
+    @answer = @num1 + @num2
   end
 
-  def correct?(input)
-    input == @answer # if input equals answer (correct? is true)
+  def is_correct?(input)
+   input == @answer
   end
 end
-
